@@ -3,7 +3,6 @@ package org.example.model;
 import org.example.model.Person;
 import org.example.model.TodoItem;
 
-import java.util.UUID;
 
 public class TodoItemTask {
 
