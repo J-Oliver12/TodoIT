@@ -12,11 +12,6 @@ public class Person {
     private String summary;
 
 
-
-
-
-
-
     private Person() {
         this.id = PersonSequencer.getNextId();
     }
@@ -80,6 +75,5 @@ public class Person {
         return "Person{ Id = " + id + ", firstName = '" + firstName + "', lastName = '" + lastName +
                 "', email = '" + email + "'}";
     }
-
 
 }
