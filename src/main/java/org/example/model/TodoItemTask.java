@@ -17,13 +17,16 @@ public class TodoItemTask {
         this.id = TodoItemTaskSequencer.getNextId();
     }
 
-    private TodoItemTask(boolean assigned, TodoItem todoItem, Person assignee) {
+    public TodoItemTask(boolean assigned, TodoItem todoItem, Person assignee) {
         this();
         setAssigned(assigned);
         setTodoItem(todoItem);
         setAssignee(assignee);
     }
 
+    public String toString() {
+        return "-Assigned: " + assigned + "\n-Todo Item --> " + todoItem + "\n-Assignee: " + assignee;
+    }
 
     public int getId() {
         return id;

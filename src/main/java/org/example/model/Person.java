@@ -23,12 +23,9 @@ public class Person {
         setEmail(email);
     }
 
-
-//    public Person(String firstName, String lastName) {
-//        this();
-//        getSummary();
-//    }
-
+    public String toString() {
+        return "First Name: " + firstName + " Last Name: " + lastName + " email: " + email;
+    }
 
     public int getId() {
         return id;

@@ -31,6 +31,10 @@ public class TodoItem {
         setCreator(creator);
     }
 
+    public String toString() {
+        return "Title: " + title + " Task Description: " + taskDescription + " Deadline: " + deadLine + " Creator: " + creator;
+    }
+
 
     public int getId() {
         return id;
