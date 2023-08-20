@@ -3,6 +3,7 @@ package org.example.model;
 import org.example.model.Person;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class TodoItem {
 
@@ -15,7 +16,7 @@ public class TodoItem {
     private Person creator;
     private boolean overdue;
 
-    private String summary;
+    // private String summary;
 
 
     private TodoItem() {
@@ -31,9 +32,11 @@ public class TodoItem {
         setCreator(creator);
     }
 
-    public String toString() {
+    /*
+    public String toString1() {
         return "Title: " + title + " Task Description: " + taskDescription + " Deadline: " + deadLine + " Creator: " + creator;
     }
+    */
 
 
     public int getId() {
@@ -96,11 +99,46 @@ public class TodoItem {
         return overdue;
     }
 
+    /*
     public String getSummary() {
         String creatorName = (creator != null) ? creator.getFullName() : "Unknown";
         return "TodoItem{ Id = " + id + ", Title = '" + title + "', TaskDescription = '" + taskDescription +
                 "', DeadLine = '" + deadLine.toString() + "', Done = '" + done + "', Creator = '" + creator + "', Overdue = '" +
                 overdue + "'}";
     }
+    */
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        TodoItem todoItem = (TodoItem)  obj;
+        return  id == todoItem.id && Objects.equals(title, todoItem.title) && Objects.equals(taskDescription,
+                todoItem.taskDescription) && Objects.equals(deadLine, todoItem.deadLine) && done == todoItem.done &&
+                overdue == todoItem.overdue;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title, taskDescription, deadLine, done, overdue);
+    }
+
+    @Override
+    public String toString() {
+        return "TodoItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", taskDescription='" + taskDescription + '\'' +
+                ", deadline=" + deadLine +
+                ", done=" + done +
+                ", overdue=" + overdue +
+                '}';
+    }
+
+
 
 }
