@@ -78,6 +78,46 @@ public class App {
         System.out.println(Item2);
         System.out.println(Item3);
 
+        System.out.println("\n##############################################################################\n");
+
+        System.out.println(user1.hashCode());
+        System.out.println(user2.hashCode());
+        System.out.println(user3.hashCode());
+
+        System.out.println("\n##############################################################################\n");
+
+
+        System.out.println(person1);
+        System.out.println(person1.hashCode());
+        System.out.println(person1.getCredentials());
+
+        System.out.println(user1);
+
+        System.out.println("\n##############################################################################\n");
+
+        System.out.println(person2);
+        System.out.println(person2.hashCode());
+        System.out.println(person2.getCredentials());
+
+        System.out.println(user2);
+
+        System.out.println("\n##############################################################################\n");
+
+        System.out.println(person3);
+        System.out.println(person3.hashCode());
+        System.out.println(person3.getCredentials());
+
+        System.out.println(user3);
+
+        System.out.println("\n##############################################################################\n");
+
+
+
+
+
+
+
+
     }
 
 }

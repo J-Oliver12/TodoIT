@@ -1,14 +1,13 @@
 package org.example.model;
 
-import org.example.model.Person;
-import org.example.model.TodoItem;
+import org.example.data.sequencer.TodoItemTaskSequencer;
 
 import java.util.Objects;
 
 
 public class TodoItemTask {
 
-    private final int id;
+    private int id;
     private boolean assigned;
     private TodoItem todoItem;
     private Person assignee;
@@ -17,7 +16,7 @@ public class TodoItemTask {
 
 
     private TodoItemTask() {
-        this.id = TodoItemTaskSequencer.getNextId();
+        this.id = TodoItemTaskSequencer.nextId();
     }
 
     public TodoItemTask(boolean assigned, TodoItem todoItem, Person assignee) {
@@ -27,14 +26,20 @@ public class TodoItemTask {
         setAssignee(assignee);
     }
 
-    /*
-    public String toString1() {
-        return "-Assigned: " + assigned + "\n-Todo Item --> " + todoItem + "\n-Assignee: " + assignee;
+    public TodoItemTask(int id, boolean assigned, TodoItem todoItem, Person assignee) {
+        setId(id);
+        setAssigned(assigned);
+        setTodoItem(todoItem);
+        setAssignee(assignee);
     }
-    */
+
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public boolean isAssigned() {
@@ -65,14 +70,6 @@ public class TodoItemTask {
         this.assigned = (assignee != null);
     }
 
-    /*
-    public String getSummary() {
-
-        String assigneeName = (assignee != null) ? assignee.getFullName() : "Unassigned";
-        return "TodoItemTask{ Id = " + id + ", Assigned = '" + assigned + "', TodoItem = '" +
-                todoItem + "', Assignee = '" + assignee + "'}";
-    }
-    */
 
     @Override
     public boolean equals(Object obj) {

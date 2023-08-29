@@ -1,6 +1,6 @@
 package org.example.model;
 
-import org.example.model.Person;
+import org.example.data.sequencer.TodoItemSequencer;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -8,7 +8,7 @@ import java.util.Objects;
 public class TodoItem {
 
 
-    private final int id;
+    private int id;
     private String title;
     private String taskDescription;
     private LocalDate deadLine;
@@ -20,7 +20,7 @@ public class TodoItem {
 
 
     private TodoItem() {
-        this.id = TodoItemSequencer.getNextId();
+        this.id = TodoItemSequencer.nextId();
     }
 
 
@@ -32,16 +32,40 @@ public class TodoItem {
         setCreator(creator);
     }
 
+    public TodoItem(int id, String title, String taskDescription, LocalDate deadLine, Person creator) {
+        setId(id);
+        setTitle(title);
+        setTaskDescription(taskDescription);
+        setDeadLine(deadLine);
+        setCreator(creator);
+    }
+
     /*
     public String toString1() {
         return "Title: " + title + " Task Description: " + taskDescription + " Deadline: " + deadLine + " Creator: " + creator;
     }
     */
-
+    @Override
+    public String toString() {
+        return "TodoItem{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", taskDescription='" + taskDescription + '\'' +
+                ", deadline=" + deadLine +
+                ", done=" + done +
+                ", overdue=" + overdue +
+                '}';
+    }
 
     public int getId() {
         return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
 
     public String getTitle() {
         return title;
@@ -70,7 +94,7 @@ public class TodoItem {
         }
 
         LocalDate currentDate = LocalDate.now();
-        if (currentDate.isAfter(deadLine)) {
+        if (currentDate.isAfter (deadLine)) {
             this.overdue = true;
         } else {
             this.overdue = false;
@@ -126,19 +150,5 @@ public class TodoItem {
     public int hashCode() {
         return Objects.hash(id, title, taskDescription, deadLine, done, overdue);
     }
-
-    @Override
-    public String toString() {
-        return "TodoItem{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", taskDescription='" + taskDescription + '\'' +
-                ", deadline=" + deadLine +
-                ", done=" + done +
-                ", overdue=" + overdue +
-                '}';
-    }
-
-
 
 }

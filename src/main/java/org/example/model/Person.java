@@ -1,5 +1,7 @@
 package org.example.model;
 
+import org.example.data.sequencer.PersonSequencer;
+
 import java.util.Objects;
 
 public class Person {
@@ -10,15 +12,12 @@ public class Person {
     private String lastName;
     private String email;
 
-    private String fullName;
-
-    //private String summary;
 
     private AppUser credentials;
 
 
     private Person() {
-        this.id = PersonSequencer.getNextId();
+        this.id = PersonSequencer.nextId();
     }
 
     public Person(String firstName, String lastName, String email) {
@@ -28,14 +27,19 @@ public class Person {
         setEmail(email);
     }
 
-    /*
-    public String toString1() {
-        return "First Name: " + firstName + " Last Name: " + lastName + " email: " + email;
+    public Person(int id, String firstName, String lastName, String email) {
+        setId(id);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
     }
-    */
 
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -75,12 +79,6 @@ public class Person {
         this.email = email;
     }
 
-    /*
-    public String getSummary() {
-        return "Person{ Id = " + id + ", firstName = '" + firstName + "', lastName = '" + lastName +
-                "', email = '" + email + "'}";
-    }
-    */
 
     public AppUser getCredentials() {
         return credentials;
