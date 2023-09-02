@@ -4,28 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e36a0c8-3d37-47d2-9878-dfafb793fbc4" name="Changes" comment="Todo IT part 2 done, new features">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/AppUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/AppUserDAOCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/PersonDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/PersonDAOCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/TodoItemDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/TodoItemDaoCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/TodoItemTaskDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/TodoItemTaskDAOCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/sequencer/PersonSequencer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/sequencer/TodoItemSequencer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/data/sequencer/TodoItemTaskSequencer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/PersonSequencer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItemSequencer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItemTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItemTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/TodoItemTaskSequencer.java" beforeDir="false" />
+    <list default="true" id="7e36a0c8-3d37-47d2-9878-dfafb793fbc4" name="Changes" comment="Todo IT part 3 new features under progress">
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/AppUserDAOCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/PersonDAOCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/TodoItemDAOCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/TodoItemTaskDAOCollectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/model/AppUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/data/dao/AppUserDAOCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/data/dao/AppUserDAOCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/model/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/PersonTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/model/TodoItemTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/TodoItemTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/model/TodoItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/model/TodoItemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,79 +60,81 @@
       <recent name="org.example.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+  <component name="RunManager" selected="JUnit.AppUserDAOCollectionTest">
+    <configuration name="AppUserDAOCollectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.AppUserDAOCollectionTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.Person" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest.TestFindAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.data.sequencer.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.model" />
-      <option name="MAIN_CLASS_NAME" value="org.example.model.PersonTest" />
-      <option name="METHOD_NAME" value="Person(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.AppUserDAOCollectionTest" />
+      <option name="METHOD_NAME" value="TestFindAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.getEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest.testFindAllEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.data.sequencer.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.model" />
-      <option name="MAIN_CLASS_NAME" value="org.example.model.PersonTest" />
-      <option name="METHOD_NAME" value="getEmail" />
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.AppUserDAOCollectionTest" />
+      <option name="METHOD_NAME" value="testFindAllEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.getSummary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest.testRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.data.sequencer.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.model" />
-      <option name="MAIN_CLASS_NAME" value="org.example.model.PersonTest" />
-      <option name="METHOD_NAME" value="getSummary" />
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.AppUserDAOCollectionTest" />
+      <option name="METHOD_NAME" value="testRemove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.setEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppUserDAOCollectionTest.testRemoveNonExistingUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TodoIT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.data.sequencer.*" />
+          <option name="PATTERN" value="data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.model" />
-      <option name="MAIN_CLASS_NAME" value="org.example.model.PersonTest" />
-      <option name="METHOD_NAME" value="setEmail" />
+      <option name="PACKAGE_NAME" value="data" />
+      <option name="MAIN_CLASS_NAME" value="data.AppUserDAOCollectionTest" />
+      <option name="METHOD_NAME" value="testRemoveNonExistingUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.PersonTest.Person" />
-        <item itemvalue="JUnit.PersonTest.getSummary" />
-        <item itemvalue="JUnit.PersonTest.setEmail" />
-        <item itemvalue="JUnit.PersonTest.getEmail" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest.testRemoveNonExistingUser" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest.testRemove" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest.testFindAllEmpty" />
+        <item itemvalue="JUnit.AppUserDAOCollectionTest.TestFindAll" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +201,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1692561959637</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Todo IT part 3 new features under progress">
+      <option name="closed" value="true" />
+      <created>1693342922065</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1693342922065</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +228,7 @@
     <MESSAGE value="Todo IT part 1 done, test attempt commit" />
     <MESSAGE value="Todo IT part 1 done, tested in App" />
     <MESSAGE value="Todo IT part 2 done, new features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo IT part 2 done, new features" />
+    <MESSAGE value="Todo IT part 3 new features under progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo IT part 3 new features under progress" />
   </component>
 </project>

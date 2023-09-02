@@ -10,6 +10,9 @@ public class AppUserDAOCollection implements AppUserDAO {
 
     @Override
     public AppUser persist(AppUser appUser) {
+        if (appUsers.containsKey(appUser.getUserName())) {
+            throw new IllegalArgumentException("Username already exist");
+        }
         appUsers.put(appUser.getUserName(), appUser);
         return appUser;
     }
